@@ -12,7 +12,7 @@
     width: 98%;
     
     .navbar-title{
-        /* >a
+        >a
         {
             color: white !important;
             margin-left: 1px;
@@ -23,7 +23,7 @@
 
         >h5{
             color: white;
-        } */
+        }
         display: flex;
         color: white;
     }

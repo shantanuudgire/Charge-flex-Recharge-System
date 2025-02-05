@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import StorageService from "./Storage.js";
-import logo from './/assets/flexipay_logo.png'
-import Home from "./Home/Home.js";
+import logo from './assets/flexipay_logo.png'
+
 
 import { Link } from "react-router-dom";
 import "./NavBar.css"; // Import your CSS file

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./home.css"; // Import your CSS file
 import backgroundImage from "../assets/home-background-img.png"
 import button from '../assets/icons8-right-chevron-50.png'
-import Navbar from '../NavBar.js'; // Import your Navbar component
+
 const Home = () => {
   const [particlesVisible, setParticlesVisible] = useState(true);
 
@@ -15,6 +15,7 @@ const Home = () => {
 
   return (
     <main className="main" style={{backgroundColor:"black", position:"absolute", justifyContent: "center", alignItems: "center"}}>
+    
       {/* {particlesVisible && <Particles id="tsparticles" options={particlesOptions} />} */}
       <div className="container"style={{backgroundColor:"black"}}>
  

@@ -2,7 +2,7 @@
 [nz-form] {
     width: 70%;
     margin-bottom: 20px;
-    margin-top: 2px;
+    margin-top: 20px;
 }
 
 .main{
@@ -13,48 +13,47 @@
     z-index: 1;
     position: absolute;
     width: 100%;
-   
-    /* padding-top: 3rem; */
-    background: linear-gradient(to right, black,rgba(0, 0, 0, 0.897), #00000020);
+    height: 100%;
+    padding-top: 30px;
+    background-color: black;
     /* // font-size: xx-large; */
-    overflow-y: scroll;
-    padding-bottom: 2rem;
 }
-.containerS{
+.container{
 
     width: 55%;
     align-self: center;
     display: flex;
     /* // border: 1px solid red; */
-    height: 77vh;
+    height: fit-content;
     justify-content: space-between;
-    padding-top: 0;
-    border-radius: 5px;
-   
-    margin-top: 0px;
-    background-color: whitesmoke;
-    box-shadow: rgb(20, 20, 20) 0px 0px 20px 3px;
+    padding: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: rgb(36, 35, 35) 0px 0px 20px 3px;
 }
 .phone-select{
     width: 70px;
 }
 
 .register-are{
-    /* margin-bottom: 8px; */
+    margin-bottom: 8px;
 }
 
-.child{
-    /* // margin-bottom: 22px;
+/* .child{
+    // margin-bottom: 22px;
     // margin-left: 700px;
-    // margin-top: 5px; */
+    // margin-top: 5px;
     
-}
+} */
 
-#signup-heading{
+.signup-heading{
     text-align: center;
     color: #b90424;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
+    margin-top: 15px;
 }
 
 nz-form-control{
@@ -62,19 +61,20 @@ nz-form-control{
    
 }
 
-.Form{
-    
+.form-item{
+
     flex-direction: column;
     display: flex;
-    padding-top: 1px;
-    
+    padding-top: 15px;
+    color:black;
+    padding-left: 10px;
 }
 .label{
 
     font-size: 13px;
-    font-weight: 500;  
+    font-weight: 500;
 }
-.input{
+.input-group{
 
     font-size: 13px;
     font-weight: 500;
@@ -92,6 +92,7 @@ nz-form-control{
     padding-right: 5px;
     border-radius: 5px;
     color: #b90424;
+    margin-bottom: 5px;
 }
 
 .login-form-button:hover{
@@ -103,40 +104,34 @@ nz-form-control{
 .left-div{
 
     width: 50%;
-    display: flex;
     background: linear-gradient(to bottom, #F64D4D, #AD1D1D);
-  
-   
-   
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .background-img{
 
-    display: flex;
-    width: 400px;
+    height: 350px;
 
 }
 
-.right-Div{
+.right-div{
     width: 50%;
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 78vh;
-    color: white;
+    padding-top: 10px;
 
 }
 
 @media screen and (max-width: 800px) {
     .left-div{
-        display: flex;
+        display: none;
     }
 
-    .right-Div{
+    .right-div{
         width: 100%;
-        
-    }
-    .main{
-        padding-top: 12rem;
     }
   }

@@ -37,7 +37,7 @@ const Signup = () => {
       console.log(res)
       if (res) {
         message.success('Signup Successful', 5);
-        navigate('/home');
+        navigate('/login');
       } else {
         message.error('Something went wrong!', 5);
       }
@@ -49,43 +49,43 @@ const Signup = () => {
   };
 
   return (
-    <div className="main" style={{ backgroundColor: 'black' }}>
+    <div className="main" >
       <Particles id="tsparticles" init={particlesInit} options={particlesOptions} />
 
-      <div className="container">
+      <div className="containerS">
         <div className="left-div">
           <img src={AuthBackgroundImage} alt="Background" className="background-img" />
         </div>
 
-        <div className="right-div">
+        <div className="right-Div">
           <h1 id="signup-heading">Sign Up</h1>
-          <Form onFinish={handleSubmit} layout="vertical">
+          <Form className='Form' onFinish={handleSubmit} layout="vertical">
             <Form.Item label="Name" name="name" rules={[{ required: true, message: 'Please enter your name' }]}>
               <Input placeholder="Enter your name" />
             </Form.Item>
 
-            <Form.Item label="Phone Number" name="phone" rules={[
+            <Form.Item className='label' label="Phone Number" name="phone" rules={[
               { required: true, message: 'Please enter your phone number' },
               { pattern: /^[0-9]{10}$/, message: 'Enter a valid 10-digit phone number' }
             ]}>
-              <Input placeholder="Enter your phone number" />
+              <Input className='input' placeholder="Enter your phone number" />
             </Form.Item>
 
-            <Form.Item label="Email" name="email" rules={[
+            <Form.Item className='label' label="Email" name="email" rules={[
               { required: true, message: 'Please enter your email' },
               { type: 'email', message: 'Enter a valid email address' }
             ]}>
-              <Input placeholder="Enter your email" />
+              <Input className='input' placeholder="Enter your email" />
             </Form.Item>
 
-            <Form.Item label="Password" name="password" rules={[
+            <Form.Item className='label' label="Password" name="password" rules={[
               { required: true, message: 'Please enter a password' },
               { min: 6, message: 'Password must be at least 6 characters' }
             ]}>
-              <Input.Password placeholder="Enter your password" />
+              <Input.Password className='input' placeholder="Enter your password" />
             </Form.Item>
 
-            <Form.Item label="Confirm Password" name="checkPassword" dependencies={['password']}
+            <Form.Item className='label' label="Confirm Password" name="checkPassword" dependencies={['password']}
               rules={[
                 { required: true, message: 'Please confirm your password' },
                 ({ getFieldValue }) => ({
@@ -98,7 +98,7 @@ const Signup = () => {
                 }),
               ]}
             >
-              <Input.Password placeholder="Confirm your password" />
+              <Input.Password className='input' placeholder="Confirm your password" />
             </Form.Item>
 
             <Form.Item>
@@ -106,7 +106,7 @@ const Signup = () => {
                 Register
               </Button>
               <div style={{ marginTop: '10px', textAlign: 'center' }}>
-                Or <a href="/home">Login now!</a>
+                Or <a href="/login">Login now!</a>
               </div>
             </Form.Item>
           </Form>

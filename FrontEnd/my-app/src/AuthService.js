@@ -6,7 +6,7 @@ const BASE_URL = "http://localhost:8080";
 class AuthService {
   // Register method to call the signup endpoint
   register(signupRequest) {
-    console.log("sdsnvkjsdbhfjdkj")
+    
     return axios.post(`${BASE_URL}/api/auth/signup`, signupRequest);
   }
 

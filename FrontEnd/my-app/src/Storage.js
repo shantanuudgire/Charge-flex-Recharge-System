@@ -3,26 +3,32 @@ class StorageService {
     static USER = "user";
   
     static saveToken(token) {
-      localStorage.removeItem(this.TOKEN);
-      localStorage.setItem(this.TOKEN, token);
+  
+      window.localStorage.removeItem(this.TOKEN);
+      window.localStorage.setItem(this.TOKEN, token);
+    
     }
   
     static saveUser(user) {
-      localStorage.removeItem(this.USER);
-      localStorage.setItem(this.USER, JSON.stringify(user));
+      console.log(user)
+      window.localStorage.removeItem(this.USER);
+      window.localStorage.setItem(this.USER, JSON.stringify(user));
     }
   
     static getToken() {
-      return localStorage.getItem(this.TOKEN);
+     
+      return window.localStorage.getItem(this.TOKEN);
     }
   
     static getUser() {
-      const userJson = localStorage.getItem(this.USER);
+      const userJson = window.localStorage.getItem(this.USER);
+      
       return userJson ? JSON.parse(userJson) : null;
     }
   
     static getUserRole() {
       const user = this.getUser();
+      // console.log(user)
       return user ? user.role : "";
     }
   
@@ -57,8 +63,8 @@ class StorageService {
     }
   
     static logout() {
-      localStorage.removeItem(this.TOKEN);
-      localStorage.removeItem(this.USER);
+      window.localStorage.removeItem(this.TOKEN);
+      window.localStorage.removeItem(this.USER);
     }
   }
   
