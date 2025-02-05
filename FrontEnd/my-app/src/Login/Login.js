@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Particles from "react-tsparticles";
 import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
-import AuthService from ".//AuthService.js";
-import StorageService from ".//Storage.js";
-import AuthBackgroundImage from './/assets/auth-bckground-img.png';
+import AuthService from "../AuthService.js";
+import StorageService from "../Storage.js";
+import AuthBackgroundImage from '../assets/auth-bckground-img.png';
 import './Login.css'
 import { loadFull } from 'tsparticles';
 
